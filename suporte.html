@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="../styles/inicial.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suporte | Steam</title>
-</head>
-<body>
-  <header>
-    <img src="../images/logo_steam.svg" alt="" class="logo-img">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles/inicial.css" />
+    <link rel="stylesheet" href="../styles/suporte.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suporte | Steam</title>
+  </head>
+  <body>
+    <header>
+      <img src="../images/logo_steam.svg" alt="" class="logo-img" />
 
-    <nav>
-      <ul>
-        <li><a href="index.html" >LOJA</a></li>
-        <li><a href="comunidade.html" >COMUNIDADE</a></li>
-        <li><a href="sobre.html" >SOBRE</a></li>
-        <li><a href="suporte.html" class="check">SUPORTE</a></li>
-      </ul>
-  </header>
-</body>
+      <nav>
+        <ul>
+          <li><a href="index.html">LOJA</a></li>
+          <li><a href="comunidade.html">COMUNIDADE</a></li>
+          <li><a href="sobre.html">SOBRE</a></li>
+          <li><a href="suporte.html" class="check">SUPORTE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Formulário de Suporte</h1>
+        <form action="#" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="problema">Tipo de Problema:</label>
+          <select id="problema" name="problema" required>
+            <option value="compra">Problema na Compra</option>
+            <option value="download">Problema no Download</option>
+            <option value="instalacao">Problema na Instalação</option>
+            <option value="outro">Outro</option>
+          </select>
+
+          <label>Plataformas Afetadas:</label>
+          <input
+            type="checkbox"
+            id="windows"
+            name="plataformas"
+            value="windows"
+          />
+          <label for="windows">Windows</label>
+          <input type="checkbox" id="mac" name="plataformas" value="mac" />
+          <label for="mac">Mac</label>
+          <input type="checkbox" id="linux" name="plataformas" value="linux" />
+          <label for="linux">Linux</label>
+
+          <label for="descricao">Descrição do Problema:</label>
+          <textarea
+            id="descricao"
+            name="descricao"
+            rows="5"
+            required
+          ></textarea>
+
+          <label for="arquivo">Anexar Arquivo:</label>
+          <input type="file" id="arquivo" name="arquivo" />
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
